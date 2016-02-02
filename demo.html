@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>scroll</title>
+<script type="text/javascript" src="script/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="script/jquery.jscroll.js"></script>
+<style type="text/css">
+<!--
+body {font-family:Arial,Helvetica,sans-serif,Verdana,'Trebuchet MS';font-size:12px;padding:30px;}
+p.code {background-color:#2b2b2b;font-family:'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro',monospace;color:#a9b7c6;padding:5px;}
+.jScroll {overflow:hidden;-moz-user-select:none;-webkit-user-select:none;user-select:none;}
+-->
+</style>
+<script type="text/javascript">
+<!--
+$(function(){
+	new jScroll('#demo1');
+	$('#demo2').jScroll({
+		type: 'h',
+		width: 300,
+		height: 20
+	});
+});
+-->
+</script>
+</head>
+<body>
+<h1>jScroll v1.0.0</h1>
+<p>jScroll is a javascript class & jQuery plugin, based on jQuery 1.x</p>
+<p>You can easily use it to scroll blocks in a HTML tag container. It compatible with mouse and touch devices</p>
+<h2>How to use jScroll</h2>
+<h3>1. Run as javascript class</h3>
+<p>e.g. new jScroll('tag id', [v:vertical(default)]|h:horizontal], [width], [height]);</p>
+<strong>STEP 1</strong>
+<p>Add css style to your HTML page:</p>
+<p class="code">.jScroll {overflow:hidden;-moz-user-select:none;-webkit-user-select:none;user-select:none;}</p>
+<strong>STEP 2</strong>
+<p>Load jquery.js and jquery.jscroll.js</p>
+<p class="code">&lt;script type="text/javascript" src="script/jquery-1.9.1.min.js"&gt;&lt;/script&gt;<br />
+&lt;script type="text/javascript" src="script/jquery.jscroll.js"&gt;&lt;/script&gt;</p>
+<strong>STEP 3</strong>
+<p>Run it</p>
+<p class="code">&lt;script type="text/javascript"&gt;new jScroll('#demo1');&lt;/script&gt;</p>
+<div id="demo1" style="width:300px;height:200px;border:1px solid #ccc;">
+	<p style="font-size:14px;line-height:150%;padding:10px;margin:0 0 20px 0;">GitHub is how people build software. With a community of more than 12 million people, developers can discover, use, and contribute to over 31 million projects using a powerful collaborative development workflow.</p>
+	<p style="font-size:14px;line-height:150%;padding:10px;margin:0 0 20px 0;">Whether using GitHub.com or your own instance of GitHub Enterprise, you can integrate GitHub with third party tools, from project management to continuous deployment, to build software in the way that works best for you.</p>
+</div>
+<h3>2. Run as jQuery plugin</h3>
+<p>e.g. $(obj).jScroll([v:vertical(default)]|h:horizontal], [width], [height]);</p>
+<strong>STEP 1</strong>
+<p>Add css style to your HTML page:</p>
+<p class="code">.jScroll {overflow:hidden;-moz-user-select:none;-webkit-user-select:none;user-select:none;}</p>
+<strong>STEP 2</strong>
+<p>Load jquery.js and jquery.jscroll.js</p>
+<p class="code">&lt;script type="text/javascript" src="script/jquery-1.9.1.min.js"&gt;&lt;/script&gt;<br />
+&lt;script type="text/javascript" src="script/jquery.jscroll.js"&gt;&lt;/script&gt;</p>
+<strong>STEP 3</strong>
+<p>Run it</p>
+<p class="code">&lt;script type="text/javascript"&gt;$('#demo1').jScroll({type:'h',width:300,height:20});&lt;/script&gt;</p>
+<div id="demo2" style="border:1px solid #ccc;">
+	<div style="white-space:nowrap;">GitHub is how people build software. With a community of more than 12 million people, developers can discover, use, and contribute to over 31 million projects using a powerful collaborative development workflow.</div>
+</div>
+</body>
+</html>
